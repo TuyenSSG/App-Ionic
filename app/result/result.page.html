@@ -1,0 +1,9 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Loaded URL</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-button expand="block" (click)="goback()" >Go Back</ion-button>
+  <iframe class= 'webPage' name= "eventsPage" [src]="openURL()" csp="frame-ancestors 'self'" allowfullscreen > </iframe>
+</ion-content>

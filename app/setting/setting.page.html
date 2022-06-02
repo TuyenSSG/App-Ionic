@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Setting</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <!-- <ion-label expand="block" routerLink="information" routerDirection="root">Thông tin tài khoản</ion-label> -->
+            <!-- <ion-button color="primary" class="login1" (click)="openBrowser('https://www.j-grab.com/account/login')">Login</ion-button> -->
+            <!-- <ion-button color="success" class="login1" (click)="openBrowser('https://www.j-grab.com/account/register')">Create your account</ion-button> -->
+            <!-- <ion-button color="warning" class="login2" (click)="openBrowser('https://www.j-grab.com/account')">Account Information</ion-button> -->
+            <div style="display:none;" [innerHtml]="newContent"></div>
+            <!-- <ion-label class="login1" (click)="openBrowser('https://www.j-grab.com/account/login')">Thông tin tài khoản</ion-label>
+            <ion-label class="login2" (click)="openBrowser('https://www.j-grab.com/account')">Thông tin tài khoản</ion-label> -->
+            <span class="login1" (click)="openBrowser('https://www.j-grab.com/account/login')"> 
+                <ion-icon name="person"></ion-icon>
+                Account information</span>
+            <!-- <span class="login1" (click)="openBrowser('https://www.j-grab.com/account/register')">Create your account</span> -->
+
+            <span class="login2" (click)="openBrowser('https://www.j-grab.com/account')">
+                <ion-icon name="person"></ion-icon>
+                Account information</span>
+        </ion-item>
+        <!-- <ion-item>
+            <ion-icon name="pricetags" size="small"></ion-icon>
+            <ion-label>Enter Coupons</ion-label>
+        </ion-item> -->
+        <ion-item>
+            <ion-icon name="book" size="small"></ion-icon>
+            <ion-label>Terms of use</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="shield-checkmark" size="small"></ion-icon>
+            <ion-label>Privacy policy</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="time" size="small"></ion-icon>
+            <ion-label expand="block" routerLink="historyqr" routerDirection="root">History QRCode</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="help-circle" size="small"></ion-icon>
+            <ion-label (click)="openBrowser('https://www.j-grab.com/pages/contact')">Inquiries Function</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="mail" size="small"></ion-icon>
+            <ion-label (click)="openBrowser('https://www.j-grab.com/pages/request')">Product Requests</ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,72 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            History QRCode
+        </ion-title>
+        <!-- <ion-icon slot="end" name="analytics"></ion-icon> -->
+        <ion-buttons slot="start">
+
+            <ion-buttons slot="start" (click)="Back()">
+                <!-- <ion-back-button defaultHref="/tabs/setting"></ion-back-button> -->
+                <ion-icon name="arrow-back-outline" defaultHref="/tabs/setting" size="large"></ion-icon>
+            </ion-buttons>
+            <ion-buttons slot="start" (click)="loadPage()" style="padding-left:10px;">
+                <!-- <ion-back-button defaultHref="/tabs/setting"></ion-back-button> -->
+                <ion-icon name="reload-outline" size="large"></ion-icon>
+            </ion-buttons>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-gird>
+        <ion-refresher slot="fixed" (ionRefresh)="getList($event)">
+            <ion-refresher-content></ion-refresher-content>
+        </ion-refresher>
+        <ion-row *ngFor="let item of db.Dataqr" (click)="openBrowser(item.text)">
+            <ion-col class="ion-text-left" size="8">
+                <ion-label (click)="openBrowser(item.text)">{{item.format}}</ion-label>
+                <br>
+                <ion-label style="padding-top: 5px;color: red; ">{{item.datetime}}</ion-label>
+            </ion-col>
+            <ion-col class="ion-text-center " offset="1 " size="3 ">
+                <img src="https:{{item.cancelled}}" style="height:60px ;width: 100%; ">
+            </ion-col>
+        </ion-row>
+        <!-- <h1> dataabase</h1>
+        <ion-row *ngFor="let user of QrCodeJgrab" (click)="openBrowser(user.text)">
+            <ion-col class="ion-text-left" size="8">
+                <ion-label (click)="openBrowser(user.text)">{{user.format}}</ion-label>
+                <br>
+                <ion-label style="padding-top: 5px;color: red; ">{{user.datetime}}</ion-label>
+            </ion-col>
+            <ion-col class="ion-text-center " offset="1 " size="3 ">
+                <img src="https:{{user.canceld}}" style="height:60px ;width: 100%; ">
+            </ion-col>
+        </ion-row>
+        <h1> User </h1> -->
+        <ion-row *ngFor="let users of QrCodeJgrabUser" (click)="openBrowser(users.url)">
+            <ion-col class="ion-text-left" size="8">
+                <ion-label (click)="openBrowser(users.url)">{{users.product_name}}</ion-label>
+                <br>
+                <ion-label style="padding-top: 5px;color: red; ">{{users.date_time}}</ion-label>
+            </ion-col>
+            <ion-col class="ion-text-center " offset="1 " size="3 ">
+                <img src="https:{{users.product_image}}" style="height:60px ;width: 100%; ">
+            </ion-col>
+        </ion-row>
+    </ion-gird>
+    <!-- <ion-item *ngFor="let user of QrCodeJgrab">
+            <ion-label>
+                <h2>{{user.text}}</h2>
+                <h3>{{user.format}}</h3>
+                <h3>{{user.datetime}}</h3>
+            </ion-label>
+            </ion-item> -->
+    <!-- <div style="display:none;" [innerHtml]="newContent"></div>
+    <div style="text-align: center;" class="popup ">
+        <ion-icon name="alert-circle-outline" size="large"></ion-icon>
+        <br>
+        <span>No History</span>
+    </div> -->
+</ion-content>

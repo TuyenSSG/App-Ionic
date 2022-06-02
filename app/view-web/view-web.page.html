@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title slot="end" style="margin-right:20px;">
+            <ion-icon expand='block' margin (click)="goToBarcodeScan()" name="reload-outline"></ion-icon>
+        </ion-title>
+        <!-- <ion-icon slot="end" name="analytics"></ion-icon> -->
+        <ion-buttons slot="start">
+            <ion-buttons slot="start">
+                <ion-back-button defaultHref="tabs/tab1"></ion-back-button>
+            </ion-buttons>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="has-header">
+    <button ion-button (click)="openWithCordovaBrowser('https://www.j-grab.com/pages/about-j-grab')">Open with Cordova browser</button>
+</ion-content>

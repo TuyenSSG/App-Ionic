@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            Home
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <!-- <iframe class="webPage" frameborder="0" name="eventsPage" [src]="safeUrl" allowfullscreen>
+  </iframe> -->
+    <!-- <ion-view view-title="HOME">
+        <ion-content>
+            <div class="row">
+                <div class="col-md-12 " id="img1">
+                    <img src="assets/img/home1.png" class="img-responsive " id="img1">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 " id="img2">
+                    <img src="assets/img/hom2.png" class="img-responsive " id="img1">
+                </div>
+                <div class="col-md-6" id="img2">
+                    <img src="assets/img/home3.png" class="img-responsive " id="img1">
+                </div>
+            </div>
+        </ion-content>
+    </ion-view> -->
+    <div>
+        <img src=" assets/img/home1.png" id="img1" class="img-responsive" (click)="openBrowser('https://www.j-grab.com/pages/about-j-grab')">
+    </div>
+    <div style=" padding-top:10px;">
+        <img src=" assets/img/hom2.png" id="img2" class="img-responsive" (click)="openBrowser('https://www.j-grab.com/collections/opening-sale')" style="padding-right:10px;">
+
+        <img src=" assets/img/home3.png" id="img2" class="img-responsive" (click)="openBrowser('https://www.j-grab.com/pages/about-j-grab')">
+    </div>
+
+    <!-- <ion-label expand="block" routerLink="view-web" routerDirection="root">Thông tin tài khoản</ion-label>
+</ion-content>on-label expand="block" routerLink="view-web" routerDirection="root">Thông tin tài khoản</ion-label> -->
+</ion-content>
